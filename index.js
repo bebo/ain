@@ -227,7 +227,7 @@ function SysLogger(config) {
     this._times = {};
     this._logError = function(err, other) {
         if(err){
-            nodeConsole.error(`Cannot log message via ${this.hostname}:${this.port} -- ${err} ${err && err.stack ? err.stack : ''});
+            nodeConsole.error(`Cannot log message via ${this.hostname}:${this.port} -- ${err} ${err && err.stack ? err.stack : ''}`);
         }
     }.bind(this);
     this.set(config);
