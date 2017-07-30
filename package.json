@@ -1,7 +1,7 @@
 {
   "name": "ain2",
   "description": "Syslog logging for node.js. Continuation of ain",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "./index",
   "author": "Alexander Dorofeev <aka.spin@gmail.com>",
   "scripts": {
@@ -37,8 +37,8 @@
       "email": ""
     },
     {
-        "name": "Johnny Dallas (theonlyjohnny)",
-        "email": "johnnydallas0308@gmail.com"
+      "name": "Johnny Dallas (theonlyjohnny)",
+      "email": "johnnydallas0308@gmail.com"
     }
   ],
   "repository": {
@@ -48,7 +48,7 @@
   "bugs": {
     "url": "http://github.com/phuesler/ain/issues"
   },
-  "license" : "MIT",
+  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
