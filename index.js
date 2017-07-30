@@ -1,4 +1,4 @@
-var dgram = require('dgram');
+var dgram = require('unix-dgram');
 var Buffer = require('buffer').Buffer;
 var nodeConsole = console;
 
@@ -312,15 +312,6 @@ SysLogger.prototype.setPort = function(port) {
 
 SysLogger.prototype.setPath = function(path) {
     this.path = path || '';
-
-    if (typeof this.path === 'string' && this.path.length > 0){
-        try {
-            dgram = require('unix-dgram');
-        } catch(err){
-            throw new Error('unix-dgram module not installed, cannot specify a unix socket path');
-        }
-    }
-
     return this;
 };
 
