@@ -112,7 +112,7 @@ var Transport = {
     },
     unix_dgram: function(message, severity, callback){
         var self = this;
-        var preambleBuffer = self.composerFunction('', severity);
+        var preambleBuffer = self.composeSyslogMessage('', severity);
         var formattedMessageBuffer = Buffer.isBuffer(message) ? message : new Buffer(message);
         var chunkSize = 2000 - preambleBuffer.length - 200;
         var numChunks = Math.ceil(formattedMessageBuffer.length / chunkSize);
@@ -416,7 +416,6 @@ SysLogger.prototype.assert = function(expression) {
  */
 SysLogger.prototype.composeSyslogMessage = function(message, severity) {
     return new Buffer('<' + (this.facility * 8 + severity) + '>' +
-                      this.getDate() + ' ' + this.hostname + ' ' +
                       this.tag + '[' + process.pid + ']:' + message);
 }
 
