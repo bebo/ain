@@ -59,7 +59,7 @@
     "mocha": "~1.12.0",
     "chai": "~1.7.2"
   },
-  "dependencies": {
-    "unix-dgram": "0.2.3"
+  "optionalDependencies": {
+    "unix-dgram": "^2.0.2"
   }
 }
